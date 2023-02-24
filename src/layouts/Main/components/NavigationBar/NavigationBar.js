@@ -6,12 +6,16 @@ import SearchIcon from '@mui/icons-material/Search'
 import AppleIcon from '@mui/icons-material/Apple'
 import AirplayIcon from '@mui/icons-material/Airplay'
 import { Clock, TopDrawer } from './components'
+import { PageURLs } from 'Routes'
 
 function NavigationBar() {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-  const navLinks = [{ id: 1, name: 'Home', to: '/' }]
+  const navLinks = [
+    { id: 1, name: 'Home', to: '/' },
+    { id: 2, name: 'About', to: PageURLs.About },
+  ]
 
   return (
     <AppBar

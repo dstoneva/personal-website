@@ -11,9 +11,10 @@ import {
   useTheme,
 } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home'
+import InfoIcon from '@mui/icons-material/Info'
 import { useNavigate } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu'
-
+import { PageURLs } from 'Routes'
 
 export default function TopDrawer() {
   const [state, setState] = useState({
@@ -42,13 +43,21 @@ export default function TopDrawer() {
         toggleDrawer()
       },
     },
-  
+    {
+      id: 2,
+      name: 'About',
+      icon: <InfoIcon />,
+      onClick: () => {
+        navigate(PageURLs.About)
+        toggleDrawer()
+      },
+    },
   ]
 
   const list = (anchor) => (
     <Box
       sx={{ width: 'auto', backgroundColor: theme.palette.common.black, borderRadius: 3 }}
-      role='presentation'
+      role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
@@ -70,11 +79,11 @@ export default function TopDrawer() {
 
   return (
     <div>
-      <Fragment key='top'>
+      <Fragment key="top">
         <IconButton onClick={toggleDrawer('top', true)}>
           <MenuIcon />
         </IconButton>
-        <Drawer anchor='top' open={state['top']} onClose={toggleDrawer('top', false)}>
+        <Drawer anchor="top" open={state['top']} onClose={toggleDrawer('top', false)}>
           {list('top')}
         </Drawer>
       </Fragment>

@@ -4,9 +4,11 @@ import { Main as MainLayout } from 'layouts'
 
 const HomeView = lazy(() => import('views/Home'))
 const NotFoundView = lazy(() => import('views/NotFound'))
+const AboutView = lazy(() => import('views/About'))
 
 export const PageURLs = {
   NotFound: '/404',
+  About: '/about',
 }
 
 const RoutesComponent = () => {
@@ -15,6 +17,7 @@ const RoutesComponent = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomeView />} />
+          <Route path={PageURLs.About} element={<AboutView />} />
         </Route>
         <Route path="*" element={<NotFoundView />} />
       </Routes>
