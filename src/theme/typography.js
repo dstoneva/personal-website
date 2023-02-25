@@ -1,20 +1,17 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
   fontSize: 14,
-  fontFamily:
-    'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+  fontFamily: 'Source Sans Pro, sans-serif',
   htmlFontSize: 16,
   body1: {
     fontSize: 14,
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 400,
     lineHeight: 1.5,
   },
   body2: {
     fontSize: 14,
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 400,
     lineHeight: 1.43,
   },
@@ -23,8 +20,7 @@ export default {
   fontWeightMedium: 500,
   fontWeightBold: 700,
   h1: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 300,
     fontSize: '3.5rem',
     lineHeight: 1.167,
@@ -39,8 +35,7 @@ export default {
     },
   },
   h2: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 300,
     fontSize: '2.375rem',
     lineHeight: 1.2,
@@ -55,8 +50,7 @@ export default {
     },
   },
   h3: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 400,
     fontSize: '2rem',
     lineHeight: 1.167,
@@ -71,8 +65,7 @@ export default {
     },
   },
   h4: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 400,
     fontSize: '1.5625rem',
     lineHeight: 1.235,
@@ -87,8 +80,7 @@ export default {
     },
   },
   h5: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 400,
     fontSize: '1.25rem',
     lineHeight: 1.334,
@@ -103,8 +95,7 @@ export default {
     },
   },
   h6: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 500,
     fontSize: '1.125rem',
     lineHeight: 1.6,
@@ -119,40 +110,71 @@ export default {
     },
   },
   subtitle1: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 400,
     fontSize: '1rem',
     lineHeight: 1.75,
   },
   subtitle2: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 500,
     fontSize: '0.875rem',
     lineHeight: 1.57,
   },
   button: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 500,
     fontSize: '0.875rem',
     lineHeight: 1.75,
     textTransform: 'uppercase',
   },
   caption: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 400,
     fontSize: '0.75rem',
     lineHeight: 1.66,
   },
   overline: {
-    fontFamily:
-      'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+    fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: 400,
     fontSize: '0.75rem',
     lineHeight: 2.66,
     textTransform: 'uppercase',
+  },
+  terminal1: {
+    fontFamily: 'Inconsolata, monospace',
+    fontWeight: 400,
+    fontSize: '2rem',
+    lineHeight: 1.167,
+    '@media (min-width:600px)': {
+      fontSize: '2.5707rem',
+    },
+    '@media (min-width:960px)': {
+      fontSize: '2.7849rem',
+    },
+    '@media (min-width:1280px)': {
+      fontSize: '2.9991rem',
+    },
+  },
+  terminal4: {
+    fontFamily: 'Inconsolata, monospace',
+    fontWeight: 400,
+    fontSize: '1.5625rem',
+    lineHeight: 1.235,
+    '@media (min-width:600px)': {
+      fontSize: '1.8219rem',
+    },
+    '@media (min-width:960px)': {
+      fontSize: '2.0243rem',
+    },
+    '@media (min-width:1280px)': {
+      fontSize: '2.0243rem',
+    },
+  },
+  terminalbody1: {
+    fontSize: 17,
+    fontFamily: 'Inconsolata, monospace',
+    fontWeight: 400,
+    lineHeight: 1.5,
   },
 }

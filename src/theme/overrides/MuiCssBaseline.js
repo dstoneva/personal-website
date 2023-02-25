@@ -25,8 +25,7 @@ radial-gradient(at 52% 16%, hsla(144, 89%, 53%, 1) 0, hsla(144, 89%, 53%, 0) 50%
         lineHeight: 1.75,
       },
       button: {
-        fontFamily:
-          'Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
+        fontFamily: 'Source Sans Pro, sans-serif',
         fontSize: 14,
       },
       a: {
