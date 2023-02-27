@@ -14,8 +14,8 @@ const renderDay = (currentDate, selectedDate, props) => {
 const useMinifiedStyles = makeStyles(() => ({
   calendar: {
     '& .MuiPickerStaticWrapper-content': {
-      borderRadius: '10px',
-      backgroundColor: 'rgba(40, 42, 54, 0.6)',
+      borderRadius: '30px',
+      backgroundColor: 'rgba(40, 42, 54, 0.3)',
     },
     '& .MuiCalendarPicker-root': {
       width: '222px',
@@ -53,9 +53,10 @@ const useMinifiedStyles = makeStyles(() => ({
     },
     '& .MuiButtonBase-root-MuiPickersDay-root, & .Mui-selected': {
       backgroundColor: '#7c4dff !important',
+      '&:hover': { backgroundColor: '#7c4dff !important' },
     },
-    '& .MuiMonthPicker-root > button:hover': {
-      background: '#00000022',
+    '& .MuiPickersDay-root:hover': {
+      backgroundColor: '#00000022 !important',
     },
   },
 }))
@@ -72,7 +73,7 @@ export default function CalendarWidget() {
     <LocalizationProvider adapterLocale={enLocale} dateAdapter={AdapterDateFns}>
       <MinifiedCalendarWrapper>
         <StaticDatePicker
-          displayStaticWrapperAs='desktop'
+          displayStaticWrapperAs="desktop"
           renderInput={(props) => <TextField {...props} />}
           value={date}
           onChange={setDate}
