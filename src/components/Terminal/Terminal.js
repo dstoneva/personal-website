@@ -27,7 +27,7 @@ function Terminal({ content, title, directory }) {
         </Box>
 
         <Typography
-          variant="subtitle1"
+          variant="terminalbody1"
           noWrap
           sx={{
             color: (theme) => theme.palette.common.white,
@@ -47,7 +47,7 @@ function Terminal({ content, title, directory }) {
             p: '1rem',
           }}
         >
-          <Typography variant="subtitle" color={(theme) => theme.palette.success.main}>
+          <Typography variant="terminalbody1" color={(theme) => theme.palette.success.main}>
             <TypingText strings={title} loop={false} />
           </Typography>
           <Box sx={{ mt: 2 }}>{content}</Box>

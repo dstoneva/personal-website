@@ -25,22 +25,26 @@ const Home = () => {
             <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', flexDirection: 'column' }}>
               <Typography
                 textAlign="center"
-                variant="h3"
+                variant="terminal1"
                 color="common.white"
-                sx={{ fontWeight: (theme) => theme.typography.fontWeightMedium }}
+                sx={{
+                  fontWeight: (theme) => theme.typography.fontWeightMedium,
+                }}
               >
                 Hello!
               </Typography>
               <Typography
                 textAlign="center"
-                variant="h3"
+                variant="terminal1"
                 color="common.white"
-                sx={{ fontWeight: (theme) => theme.typography.fontWeightMedium }}
+                sx={{
+                  fontWeight: (theme) => theme.typography.fontWeightMedium,
+                }}
               >
                 I'm {personalInfo.fullName}
               </Typography>
             </Box>
-            <Typography textAlign="center" variant="h4" color="secondary.light">
+            <Typography textAlign="center" variant="terminal4" color="secondary.light">
               <TypingText strings={personalInfo.dynamicText} loop={true} />
             </Typography>
             <Box

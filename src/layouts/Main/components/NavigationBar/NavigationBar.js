@@ -45,6 +45,7 @@ function NavigationBar() {
                       key={id}
                       style={{
                         textDecoration: 'none',
+                        fontSize: 16,
                         color: theme.palette.grey[50],
                         minWidth: 'auto',
                         marginLeft: '0.75rem',
@@ -60,10 +61,10 @@ function NavigationBar() {
               </Box>
             )}
             <Box style={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-              <WifiIcon />
-              <Battery4BarIcon />
-              <SearchIcon />
-              <AirplayIcon />
+              <WifiIcon fontSize="small" />
+              <Battery4BarIcon fontSize="small" />
+              <SearchIcon fontSize="small" />
+              <AirplayIcon fontSize="small" />
               <Clock />
             </Box>
           </Box>

@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Typography, useTheme } from '@mui/material'
+import { Typography } from '@mui/material'
 import dateFormatter from 'utils/helpers/dateFormatter'
 
 const Clock = () => {
   const [now, setNow] = useState(new Date())
-  const theme = useTheme()
 
   useEffect(() => {
     setInterval(() => {
@@ -13,7 +12,7 @@ const Clock = () => {
   }, [])
 
   return (
-    <Typography fontFamily={theme.typography.navBar} sx={{ ml: 1 }}>
+    <Typography fontSize={16} sx={{ ml: 1 }}>
       {dateFormatter(now)}
     </Typography>
   )
