@@ -14,6 +14,7 @@ import HomeIcon from '@mui/icons-material/Home'
 import InfoIcon from '@mui/icons-material/Info'
 import { useNavigate } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu'
+import ConstructionIcon from '@mui/icons-material/Construction'
 import { PageURLs } from 'Routes'
 
 export default function TopDrawer() {
@@ -49,6 +50,15 @@ export default function TopDrawer() {
       icon: <InfoIcon />,
       onClick: () => {
         navigate(PageURLs.About)
+        toggleDrawer()
+      },
+    },
+    {
+      id: 3,
+      name: 'Skills',
+      icon: <ConstructionIcon />,
+      onClick: () => {
+        navigate(PageURLs.Skills)
         toggleDrawer()
       },
     },

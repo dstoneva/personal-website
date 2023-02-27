@@ -15,6 +15,7 @@ function NavigationBar() {
   const navLinks = [
     { id: 1, name: 'Home', to: '/' },
     { id: 2, name: 'About', to: PageURLs.About },
+    { id: 3, name: 'Skills', to: PageURLs.Skills },
   ]
 
   return (
