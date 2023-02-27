@@ -1,12 +1,11 @@
-import { Grid, Typography, Box } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { OnScreen } from 'motions'
-import { Terminal, CalendarWidget, WeatherWidget } from 'components'
+import { Terminal } from 'components'
 import { personalInfo } from 'utils/constants'
 import { Hobbies } from './components'
 
 const About = () => {
   return (
-    <>
       <Grid
         container
         sx={{
@@ -33,16 +32,6 @@ const About = () => {
           </OnScreen>
         </Grid>
       </Grid>
-      <Box
-        display={{ md: 'none', sm: 'none', xs: 'none', lg: 'flex' }}
-        flexDirection="column"
-        alignItems="flex-end"
-        gap={2}
-      >
-        <WeatherWidget />
-        <CalendarWidget />
-      </Box>
-    </>
   )
 }
 
