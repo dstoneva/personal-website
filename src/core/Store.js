@@ -1,4 +1,5 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { SnackbarProvider } from 'notistack'
 import theme from 'theme'
 import { SWRConfig } from 'swr'
 import axios from 'axios'
@@ -9,7 +10,9 @@ const fetcher = (url) => axios.get(`${API_URL}${url}`).then(({ data }) => data)
 const Store = ({ children }) => {
   return (
     <ThemeProvider theme={createTheme(theme)}>
-      <SWRConfig value={{ fetcher }}>{children}</SWRConfig>
+      <SnackbarProvider maxSnack={3} autoHideDuration={1500} preventDuplicate>
+        <SWRConfig value={{ fetcher }}>{children}</SWRConfig>
+      </SnackbarProvider>
     </ThemeProvider>
   )
 }
