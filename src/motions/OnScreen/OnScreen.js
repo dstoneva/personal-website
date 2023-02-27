@@ -11,7 +11,7 @@ const OnScreen = ({ children }) => {
       opacity: 1,
       transition: {
         bounce: 0.4,
-        duration: 0.8,
+        duration: 0.4,
       },
     },
   }
