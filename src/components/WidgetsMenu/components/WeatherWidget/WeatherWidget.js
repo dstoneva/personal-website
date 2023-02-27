@@ -37,7 +37,7 @@ const TempApp = () => {
   useEffect(() => {
     getData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [city])
 
   const submitHandler = (e) => {
     if (e.key === 'Enter') {

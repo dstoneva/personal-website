@@ -1,5 +1,5 @@
 import { CircularProgress, Box, useMediaQuery, useTheme } from '@mui/material'
-import { ErrorBoundary } from 'components'
+import { ErrorBoundary, WidgetsMenu } from 'components'
 import { Outlet } from 'react-router-dom/dist'
 import { Dock, NavigationBar } from './components'
 
@@ -22,6 +22,7 @@ const Main = ({ isSuspense }) => {
         margin="auto"
       >
         {isSuspense ? <CircularProgress /> : <Outlet />}
+        <WidgetsMenu />
       </Box>
       {!isMobile && <Dock />}
     </ErrorBoundary>
