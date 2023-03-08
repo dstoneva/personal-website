@@ -57,7 +57,7 @@ const Home = () => {
                 flexDirection: { xs: 'column', md: 'row' },
               }}
             >
-              <Button color="primary" variant="contained" startIcon={<DownloadIcon />}>
+              <Button color="secondary" variant="contained" startIcon={<DownloadIcon />}>
                 Download Resume
               </Button>
               <Button variant="outlined" startIcon={<EmailIcon />}>
