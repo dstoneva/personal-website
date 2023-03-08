@@ -1,5 +1,5 @@
 import { AppBar, Box, Toolbar, useMediaQuery, useTheme, Container, CssBaseline } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Battery4BarIcon from '@mui/icons-material/Battery4Bar'
 import WifiIcon from '@mui/icons-material/Wifi'
 import SearchIcon from '@mui/icons-material/Search'
@@ -16,7 +16,29 @@ function NavigationBar() {
     { id: 1, name: 'Home', to: '/' },
     { id: 2, name: 'About', to: PageURLs.About },
     { id: 3, name: 'Skills', to: PageURLs.Skills },
+    { id: 4, name: 'Projects', to: PageURLs.Projects },
   ]
+
+  const activeStyle = {
+    fontWeight: 700,
+    textDecoration: 'none',
+    fontSize: 16,
+    color: theme.palette.grey[50],
+    minWidth: 'auto',
+    marginLeft: '0.75rem',
+    padding: 1,
+    cursor: 'default',
+  }
+
+  const nonActiveStyle = {
+    textDecoration: 'none',
+    fontSize: 16,
+    color: theme.palette.grey[50],
+    minWidth: 'auto',
+    marginLeft: '0.75rem',
+    padding: 1,
+    cursor: 'default',
+  }
 
   return (
     <AppBar
@@ -42,21 +64,9 @@ function NavigationBar() {
                 {navLinks.map((navLink) => {
                   const { id, name, to } = navLink
                   return (
-                    <Link
-                      key={id}
-                      style={{
-                        textDecoration: 'none',
-                        fontSize: 16,
-                        color: theme.palette.grey[50],
-                        minWidth: 'auto',
-                        marginLeft: '0.75rem',
-                        padding: 1,
-                        cursor: 'default',
-                      }}
-                      to={to}
-                    >
+                    <NavLink key={id} style={({ isActive }) => (isActive ? activeStyle : nonActiveStyle)} to={to}>
                       {name}
-                    </Link>
+                    </NavLink>
                   )
                 })}
               </Box>

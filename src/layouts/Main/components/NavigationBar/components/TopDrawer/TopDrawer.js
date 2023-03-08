@@ -62,6 +62,15 @@ export default function TopDrawer() {
         toggleDrawer()
       },
     },
+    {
+      id: 4,
+      name: 'Projects',
+      icon: <ConstructionIcon />,
+      onClick: () => {
+        navigate(PageURLs.Projects)
+        toggleDrawer()
+      },
+    },
   ]
 
   const list = (anchor) => (
