@@ -1,53 +1,23 @@
 import { Paper, Box, Typography, IconButton, Stack, Input } from '@mui/material'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { useState } from 'react'
 import SettingsIcon from '@mui/icons-material/Settings'
-import { PageLayout } from 'layouts/Main/components'
-import { API_URL, REACT_APP_API_KEY } from 'config'
-import { useError } from 'utils/hooks'
+import { PageLayout as Widget } from 'layouts/Main/components'
+import useSWR from 'swr'
+import { REACT_APP_API_KEY } from 'config'
 
 const TempApp = () => {
-  const [view, setView] = useState(false)
-  const { setError } = useError()
   const [city, setCity] = useState('Sofia')
-
-  const [forecast, setData] = useState({
-    current: {
-      condition: '',
-      icon: '',
-    },
-    location: {},
-  })
-
-  const baseUrl = `${API_URL}/v1/current.json?key=${REACT_APP_API_KEY}&q=${city}`
-
-  const getData = () => {
-    try {
-      axios.get(baseUrl).then((res) => {
-        setData({
-          current: res.data.current,
-          location: res.data.location,
-        })
-      })
-    } catch (error) {
-      setError(error)
-    }
-  }
-
-  useEffect(() => {
-    getData()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [city])
+  const { data: forecast, error } = useSWR(`/v1/current.json?key=${REACT_APP_API_KEY}&q=${city}`)
+  const [view, setView] = useState(false)
 
   const submitHandler = (e) => {
     if (e.key === 'Enter') {
-      getData()
+      setCity(e.target.value)
       setView(!view)
     }
   }
-
   return (
-    <PageLayout data={forecast}>
+    <Widget data={forecast} error={error}>
       <Paper
         sx={{
           p: 2,
@@ -64,21 +34,19 @@ const TempApp = () => {
 
         <Box display="flex" justifyContent="flex-start" marginLeft={3}>
           {view ? (
-            <Input
-              placeholder="Change location..."
-              sx={{ mt: 3 }}
-              onKeyDown={submitHandler}
-              onChange={(e) => {
-                setCity(e.target.value)
-              }}
-            />
+            <Input autoFocus placeholder="Enter a city and press Enter" sx={{ mt: 3 }} onKeyDown={submitHandler} />
           ) : (
             <Box display="flex" alignItems="flex-start" flexDirection="column">
               <Stack>
                 <Typography variant="subtitle2">
                   {forecast?.location.name}, {forecast?.location?.country}
                 </Typography>
-                <Typography variant="h2">{Math.round(forecast?.current?.temp_c)}°</Typography>
+                <Box display="flex" gap={0.5}>
+                  <Typography variant="h2">{Math.round(forecast?.current?.temp_c)}</Typography>
+                  <Typography fontSize="2rem" lineHeight={1.75}>
+                    &deg;C
+                  </Typography>
+                </Box>
               </Stack>
               <Stack>
                 <Box display="flex" alignItems="center">
@@ -100,7 +68,7 @@ const TempApp = () => {
           )}
         </Box>
       </Paper>
-    </PageLayout>
+    </Widget>
   )
 }
 
