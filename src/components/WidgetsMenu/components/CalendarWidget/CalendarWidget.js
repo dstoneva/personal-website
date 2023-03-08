@@ -52,8 +52,8 @@ const useMinifiedStyles = makeStyles(() => ({
       fontSize: 14,
     },
     '& .MuiButtonBase-root-MuiPickersDay-root, & .Mui-selected': {
-      backgroundColor: '#7c4dff !important',
-      '&:hover': { backgroundColor: '#7c4dff !important' },
+      backgroundColor: '#7038A8 !important',
+      '&:hover': { backgroundColor: '#7038A8 !important' },
     },
     '& .MuiPickersDay-root:hover': {
       backgroundColor: '#00000022 !important',
