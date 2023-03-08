@@ -8,7 +8,7 @@ const personalInfo = {
       emoji: '📖',
     },
     {
-      label: 'sport',
+      label: 'sports',
       emoji: '🏀',
     },
     {
