@@ -8,7 +8,7 @@ import {
   ListItemText,
   ListItemIcon,
   Box,
-  useTheme,
+  Typography,
 } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home'
 import InfoIcon from '@mui/icons-material/Info'
@@ -22,8 +22,6 @@ export default function TopDrawer() {
   const [state, setState] = useState({
     top: false,
   })
-
-  const theme = useTheme()
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -76,7 +74,7 @@ export default function TopDrawer() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: 'auto', backgroundColor: theme.palette.common.black, borderRadius: 3 }}
+      sx={{ width: 'auto', backgroundColor: 'terminal.main', borderRadius: 3 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -87,8 +85,14 @@ export default function TopDrawer() {
           return (
             <ListItem key={id} disablePadding>
               <ListItemButton onClick={onClick}>
-                <ListItemIcon>{icon}</ListItemIcon>
-                <ListItemText primary={name} />
+                <ListItemIcon sx={{ color: 'terminal.subtitle', minWidth: 40 }}>{icon}</ListItemIcon>
+                <ListItemText
+                  primary={
+                    <Typography variant="terminalbody1" color="terminal.subtitle">
+                      {name}
+                    </Typography>
+                  }
+                />
               </ListItemButton>
             </ListItem>
           )
