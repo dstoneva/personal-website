@@ -5,7 +5,7 @@ import { personalInfo } from 'utils/constants'
 export default function Hobbies() {
   return (
     <Box sx={{ mt: 1 }}>
-      <Typography variant="terminalbody1" sx={{ mb: 1 }}>
+      <Typography variant="terminalbody1" color='terminal.subtitle1' sx={{ mb: 1 }}>
         Apart from coding, my interests include:
       </Typography>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
@@ -14,7 +14,7 @@ export default function Hobbies() {
             <Box component="span" fontSize="1.25rem">
               {hobby.emoji}
             </Box>
-            <Typography variant="terminalbody1">
+            <Typography variant="terminalbody1" color='terminal.subtitle1'>
               {hobby.label}
             </Typography>
           </Box>

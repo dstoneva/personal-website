@@ -13,7 +13,7 @@ function Terminal({ content, title, directory }) {
         alignItems="center"
         justifyContent={'space-between'}
         sx={{
-          backgroundColor: '#31363f',
+          backgroundColor: 'terminal.secondary',
           borderRadius: '0.5rem 0.5rem 0 0',
           p: '0.5rem',
           cursor: 'move',
@@ -21,16 +21,15 @@ function Terminal({ content, title, directory }) {
         }}
       >
         <Box display="flex">
-          <FiberManualRecordIcon sx={{ color: '#fb4847' }} fontSize="small" />
-          <FiberManualRecordIcon sx={{ color: '#feb525' }} fontSize="small" />
-          <FiberManualRecordIcon sx={{ color: '#2ac933' }} fontSize="small" />
+          <FiberManualRecordIcon sx={{ color: 'terminal.trafficLight1' }} fontSize="small" />
+          <FiberManualRecordIcon sx={{ color: 'terminal.trafficLight2' }} fontSize="small" />
+          <FiberManualRecordIcon sx={{ color: 'terminal.trafficLight3' }} fontSize="small" />
         </Box>
 
         <Typography
           variant="terminalbody1"
           noWrap
           sx={{
-            color: (theme) => theme.palette.common.white,
             overflow: 'hidden',
           }}
         >
@@ -42,12 +41,12 @@ function Terminal({ content, title, directory }) {
         <Box
           borderRadius={'0 0 0.5rem 0.5rem'}
           sx={{
-            backgroundColor: '#282A36',
-            border: '3px solid #31363f',
+            backgroundColor: 'terminal.main',
+            border: '3px solid #273244',
             p: '1rem',
           }}
         >
-          <Typography variant="terminalbody1" color={(theme) => theme.palette.success.main}>
+          <Typography variant="terminalbody1" color='terminal.subtitle'>
             <TypingText strings={title} loop={false} />
           </Typography>
           <Box sx={{ mt: 2 }}>{content}</Box>
