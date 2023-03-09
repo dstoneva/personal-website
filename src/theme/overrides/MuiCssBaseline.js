@@ -5,8 +5,8 @@ export default (theme) => ({
     styleOverrides: {
       body: {
         background: '#663399',
-        width: '100vw',
-        height: '100%',
+        width: '100%',
+        minHeight: '100%',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
