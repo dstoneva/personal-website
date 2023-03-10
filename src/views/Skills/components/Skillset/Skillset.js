@@ -1,9 +1,8 @@
-import { Box, Tooltip, Paper } from '@mui/material'
+import { Box, Tooltip } from '@mui/material'
 import { Fragment } from 'react'
 
 const Skillset = ({ skill }) => {
   return (
-    <Paper sx={{ mb: 1, p: 1,}}>
       <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', m: 1 }}>
         {skill.map((item) => {
           return (
@@ -25,7 +24,6 @@ const Skillset = ({ skill }) => {
           )
         })}
       </Box>
-    </Paper>
   )
 }
 
