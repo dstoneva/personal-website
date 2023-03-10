@@ -1,7 +1,7 @@
 const projectsInfo = [
   {
     title: 'E-commerce',
-    logo: 'images/ecommerce_logo.png',
+    logo: 'images/ecommerce_logo.webp',
     media: 'images/ecommerce_desktop.webp',
     info: 'E-commerce is an e-commerce platform that allows users to purchase various items through multi-step checkout form. The application is built using React and several popular React libraries including Formik, Yup, Axios, Notistack and more. The user interface is designed using Material-UI, and the application is a progressive web app (PWA), providing a seamless and fast experience for users on both desktop and mobile devices.',
     technologies: ['MUI', 'ReactJS'],
@@ -10,16 +10,16 @@ const projectsInfo = [
   },
   {
     title: 'Airbnb offer page',
-    logo: 'images/airbnb_logo.png',
+    logo: 'images/airbnb_logo.webp',
     media: 'images/airbnb_desktop.webp',
-    info: 'Airbnb offer page clone.',
+    info: 'Airbnb offer page clone. This was my first web page, which I built to practice my newfound HTML & CSS skills.',
     technologies: ['HTML', 'SCSS'],
     demoURL: 'https://dstoneva-airbnb-clone.vercel.app',
     sourceURL: 'https://github.com/dstoneva/html-css-airbnb-clone',
   },
   {
     title: 'Personal website',
-    logo: 'images/portfolio_logo.png',
+    logo: 'images/portfolio_logo.webp',
     media: 'images/portfolio_desktop.webp',
     info: 'You are here! A personal website made using ReactJS. The user interface is inspired by macOS and designed using Material-UI.',
     technologies: ['MUI', 'ReactJS'],
@@ -28,7 +28,7 @@ const projectsInfo = [
   },
   {
     title: 'Hangman',
-    logo: 'images/hangman-logo.png',
+    logo: 'images/hangman-logo.webp',
     media: 'images/hangman_desktop.webp',
     info: "A game of Hangman with a twist and inspired by Wordle. Made using Reactstrap and ReactJS. This is a showcase of using local storage to save the game's progress even if you refresh or leave the page.",
     technologies: ['Reactstrap', 'ReactJS'],
