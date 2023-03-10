@@ -16,7 +16,6 @@ function Terminal({ content, title, directory }) {
           backgroundColor: 'terminal.secondary',
           borderRadius: '0.5rem 0.5rem 0 0',
           p: '0.5rem',
-          cursor: 'move',
           maxHeight: '2.25rem',
         }}
       >

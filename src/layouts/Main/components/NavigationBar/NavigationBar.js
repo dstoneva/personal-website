@@ -27,7 +27,6 @@ function NavigationBar() {
     minWidth: 'auto',
     marginLeft: '0.75rem',
     padding: 1,
-    cursor: 'default',
   }
 
   const nonActiveStyle = {
@@ -37,7 +36,6 @@ function NavigationBar() {
     minWidth: 'auto',
     marginLeft: '0.75rem',
     padding: 1,
-    cursor: 'default',
   }
 
   return (
