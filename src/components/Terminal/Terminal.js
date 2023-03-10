@@ -37,7 +37,7 @@ function Terminal({ content, title, directory }) {
         </Typography>
         <MoreHorizIcon />
       </Box>
-      <SimpleBar style={{ maxHeight: 452 }}>
+      <SimpleBar style={{ maxHeight: 500 }}>
         <Box
           borderRadius={'0 0 0.5rem 0.5rem'}
           sx={{
