@@ -17,6 +17,8 @@ const personalInfo = {
     },
   ],
   email: 'denitza.toneva@gmail.com',
+  skills:
+    'My experience includes developing responsive websites using HTML, CSS and JavaScript. I have also implemented AJAX for dynamic content loading and built user interfaces with ReactJS and React frameworks.',
 }
 
 export default personalInfo
