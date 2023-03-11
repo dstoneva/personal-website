@@ -1,5 +1,6 @@
 import { Paper, Box, Typography, IconButton, Stack, Input } from '@mui/material'
 import { useState } from 'react'
+import { UnitSwitch } from './components'
 import SettingsIcon from '@mui/icons-material/Settings'
 import { PageLayout as Widget } from 'layouts/Main/components'
 import useSWR from 'swr'
@@ -9,6 +10,7 @@ const TempApp = () => {
   const [city, setCity] = useState('Sofia')
   const { data: forecast, error } = useSWR(`/v1/current.json?key=${REACT_APP_API_KEY}&q=${city}`)
   const [view, setView] = useState(false)
+  const [unit, setUnit] = useState('C')
 
   const submitHandler = (e) => {
     if (e.key === 'Enter') {
@@ -16,6 +18,7 @@ const TempApp = () => {
       setView(!view)
     }
   }
+
   return (
     <Widget data={forecast} error={error}>
       <Paper
@@ -42,10 +45,10 @@ const TempApp = () => {
                   {forecast?.location.name}, {forecast?.location?.country}
                 </Typography>
                 <Box display="flex" gap={0.5}>
-                  <Typography variant="h2">{Math.round(forecast?.current?.temp_c)}</Typography>
-                  <Typography fontSize="2rem" lineHeight={1.75}>
-                    &deg;C
+                  <Typography variant="h2">
+                    {Math.round(unit === 'C' ? forecast?.current?.temp_c : forecast?.current?.temp_f)}
                   </Typography>
+                  <UnitSwitch unit={unit} setUnit={setUnit} />
                 </Box>
               </Stack>
               <Stack>
