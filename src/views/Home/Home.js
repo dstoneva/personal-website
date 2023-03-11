@@ -58,7 +58,9 @@ const Home = () => {
               }}
             >
               <Button color="secondary" variant="contained" startIcon={<DownloadIcon />}>
-                Download Resume
+                <a href="/files/CV.pdf" target="_blank" download style={{ color: '#fff' }}>
+                  Download Resume
+                </a>
               </Button>
               <Button variant="outlined" startIcon={<EmailIcon />}>
                 <MailTo label="Contact Me" mailto={`mailto:${personalInfo.email}`} />
