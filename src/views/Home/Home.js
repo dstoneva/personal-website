@@ -26,7 +26,6 @@ const Home = () => {
               <Typography
                 textAlign="center"
                 variant="terminal1"
-                color="common.white"
                 sx={{
                   fontWeight: (theme) => theme.typography.fontWeightMedium,
                 }}
@@ -36,7 +35,6 @@ const Home = () => {
               <Typography
                 textAlign="center"
                 variant="terminal1"
-                color="common.white"
                 sx={{
                   fontWeight: (theme) => theme.typography.fontWeightMedium,
                 }}
