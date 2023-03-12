@@ -32,7 +32,7 @@ const TempApp = () => {
       <Widget
         weatherApi
         data={forecast}
-        error={error}
+        error={error?.response.data.error.message}
         button={
           <IconButton size="small" variant="contained" color="primary" onClick={() => setCity('Sofia')}>
             <ArrowBack fontSize="small" />
