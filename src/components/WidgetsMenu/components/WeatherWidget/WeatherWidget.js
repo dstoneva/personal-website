@@ -13,7 +13,7 @@ const TempApp = () => {
   const [unit, setUnit] = useState('C')
 
   const submitHandler = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && e.target.value.trim() !== '') {
       setCity(e.target.value)
       setView(!view)
     }
