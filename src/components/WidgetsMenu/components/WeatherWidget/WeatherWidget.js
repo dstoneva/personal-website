@@ -5,6 +5,7 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import { PageLayout as Widget } from 'layouts/Main/components'
 import useSWR from 'swr'
 import { REACT_APP_API_KEY } from 'config'
+import { ArrowBack } from '@mui/icons-material'
 
 const TempApp = () => {
   const [city, setCity] = useState('Sofia')
@@ -20,14 +21,23 @@ const TempApp = () => {
   }
 
   return (
-    <Widget data={forecast} error={error}>
-      <Paper
-        sx={{
-          p: 2,
-          width: 270,
-          height: 220,
-          borderRadius: 8,
-        }}
+    <Paper
+      sx={{
+        p: 2,
+        width: 270,
+        height: 220,
+        borderRadius: 8,
+      }}
+    >
+      <Widget
+        weatherApi
+        data={forecast}
+        error={error}
+        button={
+          <IconButton size="small" variant="contained" color="primary" onClick={() => setCity('Sofia')}>
+            <ArrowBack fontSize="small" />
+          </IconButton>
+        }
       >
         <Box display="flex" alignContent="center" justifyContent="flex-end">
           <IconButton onClick={() => setView(!view)}>
@@ -70,8 +80,8 @@ const TempApp = () => {
             </Box>
           )}
         </Box>
-      </Paper>
-    </Widget>
+      </Widget>
+    </Paper>
   )
 }
 

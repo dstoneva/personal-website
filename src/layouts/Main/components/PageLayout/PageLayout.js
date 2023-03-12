@@ -8,11 +8,20 @@ const PageLayout = ({
   container = false,
   title,
   loading = <CircularProgress />,
+  button,
+  weatherApi,
 }) => {
   if (error)
     return (
       <Container>
-        <Typography>We had an error, please contact the system administrator.</Typography>
+        <Box display="flex" justifyContent="flex-start" alignItems="center">
+          {button}
+          <Typography textAlign="center">
+            {weatherApi
+              ? error.response.data.error.message
+              : 'We had an error, please contact the system administrator.'}
+          </Typography>
+        </Box>
       </Container>
     )
 
