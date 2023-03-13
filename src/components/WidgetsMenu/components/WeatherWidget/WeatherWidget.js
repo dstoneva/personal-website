@@ -20,6 +20,11 @@ const TempApp = () => {
     }
   }
 
+  const clickHandler = () => {
+    setCity('Sofia')
+    setView(!view)
+  }
+
   return (
     <Paper
       sx={{
@@ -34,7 +39,7 @@ const TempApp = () => {
         data={forecast}
         error={error?.response.data.error.message}
         button={
-          <IconButton size="small" variant="contained" color="primary" onClick={() => setCity('Sofia')}>
+          <IconButton size="small" variant="contained" color="primary" onClick={clickHandler}>
             <ArrowBack fontSize="small" />
           </IconButton>
         }
