@@ -36,21 +36,27 @@ function Terminal({ content, title, directory }) {
         </Typography>
         <MoreHorizIcon />
       </Box>
-      <SimpleBar style={{ maxHeight: 500 }}>
-        <Box
-          borderRadius={'0 0 0.5rem 0.5rem'}
-          sx={{
-            backgroundColor: 'terminal.main',
-            border: '3px solid #273244',
-            p: '1rem',
-          }}
-        >
-          <Typography variant="terminalbody1" color='terminal.subtitle'>
-            <TypingText strings={title} loop={false} />
-          </Typography>
-          <Box sx={{ mt: 2 }}>{content}</Box>
-        </Box>
-      </SimpleBar>
+      <Box
+        sx={{
+          borderRadius: '0 0 0.5rem 0.5rem',
+          overflow: 'hidden',
+        }}
+      >
+        <SimpleBar style={{ maxHeight: 500 }}>
+          <Box
+            sx={{
+              backgroundColor: 'terminal.main',
+              border: '3px solid #273244',
+              p: '1rem',
+            }}
+          >
+            <Typography variant="terminalbody1" color="terminal.subtitle">
+              <TypingText strings={title} loop={false} />
+            </Typography>
+            <Box sx={{ mt: 2 }}>{content}</Box>
+          </Box>
+        </SimpleBar>
+      </Box>
     </div>
   )
 }
