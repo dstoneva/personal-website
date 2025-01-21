@@ -1,5 +1,4 @@
 import { Box, Typography, Grid, Button } from '@mui/material'
-import { TypingText } from 'components'
 import { MailTo } from './components'
 import { OnScreen, float } from 'motions'
 import DownloadIcon from '@mui/icons-material/Download'
@@ -42,9 +41,6 @@ const Home = () => {
                 I'm {personalInfo.fullName}
               </Typography>
             </Box>
-            <Typography textAlign="center" variant="terminal4" color="secondary.light">
-              <TypingText strings={personalInfo.dynamicText} loop={true} />
-            </Typography>
             <Box
               sx={{
                 display: 'flex',
@@ -56,7 +52,7 @@ const Home = () => {
               }}
             >
               <Button color="secondary" variant="contained" startIcon={<DownloadIcon />}>
-                <a href="/files/CV.pdf" target="_blank" download style={{ color: '#fff' }}>
+                <a href="/files/Resume.pdf" target="_blank" download style={{ color: '#fff' }}>
                   Download Resume
                 </a>
               </Button>

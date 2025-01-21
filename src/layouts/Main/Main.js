@@ -15,13 +15,19 @@ const Main = ({ isSuspense }) => {
         alignItems="center"
         height={
           isMobile
-            ? `calc(100vh - ${theme.sizing.header.height})`
-            : `calc(100vh - (${theme.sizing.header.height} + ${theme.sizing.footer.height}))`
+            ? `calc(100dvh - ${theme.sizing.header.height})`
+            : `calc(100dvh - (${theme.sizing.header.height} + ${theme.sizing.footer.height}))`
         }
         maxWidth="lg"
         margin="auto"
       >
-        {isSuspense ? <CircularProgress /> : <Outlet />}
+        <Box
+          sx={{
+            width: '100%',
+          }}
+        >
+          {isSuspense ? <CircularProgress /> : <Outlet />}
+        </Box>
         <WidgetsMenu />
       </Box>
       {!isMobile && <Dock />}

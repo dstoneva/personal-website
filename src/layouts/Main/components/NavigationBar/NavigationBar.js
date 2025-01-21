@@ -45,6 +45,7 @@ function NavigationBar() {
         backdropFilter: 'blur(1px) saturate(186%)',
         border: '1px solidrgba(255, 255, 255, 0.125)',
         backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09))',
+        height: theme.sizing.header.height,
       }}
       elevation={1}
     >
