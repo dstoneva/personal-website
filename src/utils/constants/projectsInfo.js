@@ -3,7 +3,7 @@ const projectsInfo = [
     title: 'E-commerce',
     logo: 'images/ecommerce_logo.webp',
     media: 'images/ecommerce_desktop.webp',
-    info: 'E-commerce is an e-commerce platform that allows users to purchase various items through multi-step checkout form. The application is built using React and several popular React libraries including Formik, Yup, Axios, Notistack and more. The user interface is designed using Material-UI, and the application is a progressive web app (PWA), providing a seamless and fast experience for users on both desktop and mobile devices.',
+    info: 'E-commerce is an e-commerce platform that allows users to purchase various items through multi-step checkout form. The application is built using React and several popular React libraries including Formik, Yup, Axios, Notistack and more. The user interface is designed using Material-UI, providing a seamless and fast experience for users on both desktop and mobile devices.',
     technologies: ['MUI', 'ReactJS', 'NodeJS', 'Express', 'MongoDB'],
     demoURL: 'https://e-commerce-dstoneva.netlify.app',
     sourceURL: 'https://github.com/dstoneva/e-commerce',
