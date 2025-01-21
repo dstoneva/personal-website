@@ -1,5 +1,4 @@
 import { Box, Typography, Grid, Button } from '@mui/material'
-import { TypingText } from 'components'
 import { MailTo } from './components'
 import { OnScreen, float } from 'motions'
 import DownloadIcon from '@mui/icons-material/Download'
@@ -42,9 +41,6 @@ const Home = () => {
                 I'm {personalInfo.fullName}
               </Typography>
             </Box>
-            <Typography textAlign="center" variant="terminal4" color="secondary.light">
-              <TypingText strings={personalInfo.dynamicText} loop={true} />
-            </Typography>
             <Box
               sx={{
                 display: 'flex',
