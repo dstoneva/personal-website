@@ -52,7 +52,7 @@ const Home = () => {
               }}
             >
               <Button color="secondary" variant="contained" startIcon={<DownloadIcon />}>
-                <a href="/files/CV.pdf" target="_blank" download style={{ color: '#fff' }}>
+                <a href="/files/Resume.pdf" target="_blank" download style={{ color: '#fff' }}>
                   Download Resume
                 </a>
               </Button>
