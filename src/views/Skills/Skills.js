@@ -30,8 +30,8 @@ const Skills = () => {
                   The following are the technologies that I am most familiar with, including the UI frameworks and
                   version control systems I've used:
                 </Typography>
-                {techSkills.map((skill, key) => (
-                  <Skillset key={key} skill={skill[key]} />
+                {techSkills.map((skillset) => (
+                  <Skillset key={skillset.category} skills={skillset.skills} />
                 ))}
               </Stack>
             }
